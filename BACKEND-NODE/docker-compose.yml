@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./
+    env_file: ./.env
+    command: npm run start
+    ports:
+      - "7331:7331"
+    volumes:
+      - .:/LISTENER/
